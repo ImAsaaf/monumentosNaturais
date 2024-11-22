@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monumento Natural</title>
+  <style>
+    /* CSS para estilização */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+      color: #333;
+    }
+
+    header {
+      background: #00796b;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin: 10px 0 0;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #f1f8e9;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      color: #004d40;
+      margin-top: 0;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      padding: 10px 0;
+    }
+
+    .carousel img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel img:hover {
+  transform: scale(1.1);
+}
+
+
+    form {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    form label {
+      font-weight: bold;
+      color: #004d40;
+    }
+
+    textarea, input, select, button {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="email"] {
+      border: 1px solid #00897b;
+    }
+
+    button {
+      background: #00796b;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #004d40;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #004d40;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Monumento Natural</h1>
+    <p>Protegendo as maravilhas naturais e promovendo a conscientização ambiental.</p>
+  </header>
+
+  <main>
+    <!-- Seção de informações gerais -->
+    <section id="info">
+      <h2>O que é um Monumento Natural?</h2>
+      <p>
+        Um Monumento Natural é uma unidade de conservação que protege formações naturais específicas de grande beleza ou valor ecológico, como cavernas, montanhas e cachoeiras. Essas áreas permitem visitação controlada para garantir sua preservação.
+      </p>
+      <h3>Exemplos no Brasil:</h3>
+      <ul>
+        <li>Parque Estadual de Vila Velha (PR)</li>
+        <li>Pão de Açúcar (RJ)</li>
+        <li>Gruta Rei do Mato (MG)</li>
+      </ul>
+    </section>
+
+    <!-- Seção de alertas -->
+    <section id="alertas">
+      <h2>Alertas de Preservação</h2>
+      <ul>
+        <li>⚠️ Aumento do risco de incêndios durante períodos de seca. Evite fogueiras!</li>
+        <li>⚠️ Proibida a entrada de veículos motorizados em áreas demarcadas.</li>
+        <li>⚠️ Denuncie práticas ilegais, como extração de recursos ou caça de animais silvestres.</li>
+        <li>🌱 Participe de campanhas de reflorestamento promovidas na região.</li>
+      </ul>
+    </section>
+
+    <!-- Seção de fotos -->
+    <section id="fotos">
+      <h2>Fotos de Monumentos Naturais</h2>
+      <div class="carousel">
+        <img src="img/imagem1.jpg" alt="Foto 1">
+        <img src="img/imagem2.jpg" alt="Foto 2">
+        <img src="img/imagem3.jpeg" alt="Foto 3">
+        <img src="img/imagem4.jpeg" alt="Foto 4">
+        <img src="img/imagem5.jpeg" alt="Foto 5">
+      </div>
+    </section>
+
+    <!-- Seção de denúncias -->
+    <section id="denuncias">
+      <h2>Denúncias</h2>
+      <p>Ajude a proteger os Monumentos Naturais. Envie denúncias de invasões ou incêndios:</p>
+      <form id="formDenuncia">
+        <label for="destino">Selecione para quem enviar:</label>
+        <select id="destino" name="destino" required>
+          <option value="">Selecione...</option>
+          <option value="ibama">Órgãos Públicos (IBAMA, Secretarias Ambientais)</option>
+          <option value="ong">ONGs de Preservação Ambiental</option>
+          <option value="defesa_civil">Defesa Civil ou Corpo de Bombeiros</option>
+        </select>
+
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" name="descricao" rows="4" placeholder="Descreva o problema..." required></textarea>
+
+        <label for="email">Seu e-mail (opcional):</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="exemplo@dominio.com"
+        >
+
+        <button type="submit">Enviar Denúncia</button>
+      </form>
+      <p id="mensagem"></p>
+    </section>
+
+    <!-- Seção adicional -->
+    <section id="educacao">
+      <h2>Programas Educacionais</h2>
+      <p>Participe de ações educativas para aprender mais sobre a conservação de Monumentos Naturais:</p>
+      <ul>
+        <li>Visitas guiadas com especialistas em biodiversidade.</li>
+        <li>Campanhas de conscientização para escolas e comunidades.</li>
+        <li>Workshops sobre reciclagem e práticas sustentáveis.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Trabalho - Legislação e Direito Ambiental</p>
+  </footer>
+
+  <script>
+    // JavaScript para interatividade
+    document.getElementById("formDenuncia").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const descricao = document.getElementById("descricao").value;
+      const destino = document.getElementById("destino").value;
+
+      if (descricao && destino) {
+        document.getElementById("mensagem").textContent = "Denúncia enviada com sucesso! Obrigado por ajudar a proteger nossos Monumentos Naturais.";
+        document.getElementById("mensagem").style.color = "green";
+        document.getElementById("formDenuncia").reset();
+      } else {
+        document.getElementById("mensagem").textContent = "Por favor, preencha todos os campos obrigatórios antes de enviar.";
+        document.getElementById("mensagem").style.color = "red";
+      }
+    });
+  </script>
+</body>
+</html>
